@@ -1,0 +1,680 @@
+.content-row {
+    padding: 50px 20px 50px 80px;
+    overflow: visible;
+}
+
+.content-row.grey-backgorund {
+    background: rgba(244, 244, 244, .8);
+    padding: 50px 20px 50px 80px;
+    overflow: auto;
+}
+
+h4.greetings {
+    text-align: left;
+    font: 22px/25px HusqvarnaGothic-Bold;
+    color: rgba(18, 83, 161, 1);
+    margin-bottom: 20px;
+}
+
+.customer-mobile-text {
+    font: 16px/25px HusqvarnaGothic-Bold;
+    color: #2D2D2D;
+}
+
+.user-input-wrp .inputText {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #AEAEAE;
+    box-shadow: none !important;
+    padding: 20px 0 10px;
+    font-size: 18px;
+    font-family: 'HusqvarnaGothic-Regular';
+    color: #161616;
+}
+
+.user-input-wrp select.select.inputText {
+    font-size: 16px;
+    font-family: 'HusqvarnaGothic-Regular';
+    color: #2D2D2D;
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    background: transparent url(../../assets/images/dropdown-arow.png)no-repeat 95% 25px;
+    padding: 20px 0 14px;
+}
+
+.user-input-wrp .inputText:focus {
+    border-bottom: 2px solid #8B8B8B;
+}
+
+.column_split {
+    display: flex
+}
+
+.customer-mobile {
+    width: 335px;
+    margin-right: 50px;
+
+}
+
+.about-dealer {
+    width: 400px;
+    padding: 0 40px;
+    border-left: 1px dashed #707070;
+    border-right: 1px dashed #707070;
+}
+
+.about-dealer .dealer-name {
+    font: 20px/25px HusqvarnaGothic-Bold;
+    letter-spacing: 0.4px;
+    color: #161616;
+    margin: 0 0 5px;
+}
+
+.about-dealer button.edit {
+    padding: 0 10px;
+    background: transparent;
+    border: none;
+    float: right;
+    margin: 0 -20px 0 0;
+}
+
+.about-dealer button.edit i {
+    color: #8B8B8B;
+    font-size: 13px;
+}
+
+.about-dealer .dealer-address {
+    font: 15px/25px HusqvarnaGothic-Regular;
+    letter-spacing: 0.3px;
+    color: #161616;
+}
+
+.about-dealer .dealer-email {
+    font: 15px/25px HusqvarnaGothic-Regular;
+    letter-spacing: 0.3px;
+    color: #8B8B8B;
+    opacity: 1;
+}
+
+.points-redeem {
+    width: 270px;
+    padding: 0 10px 0 40px;
+}
+
+.points-redeem h4 {
+    font: 16px/25px HusqvarnaGothic-Bold;
+    color: #2D2D2D;
+}
+
+.points {
+    display: inline-block;
+    float: left;
+    font: 22px/25px HusqvarnaGothic-Bold;
+    letter-spacing: 0.66px;
+    color: #2D2D2D;
+    padding: 0px 10px 0px 25px;
+    margin: 10px 0px;
+    background: url(../../assets/images/referral-icon.png) no-repeat 0 3px / 16px;
+}
+
+.points-redeem button {
+    margin: 5px 0px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #F25420;
+    border-radius: 4px;
+    font: 13px/25px HusqvarnaGothic-Bold;
+    letter-spacing: 0.52px;
+    color: #F25420;
+    text-transform: uppercase;
+    float: right;
+    transition: .2s linear;
+
+}
+
+.points-redeem button:hover {
+    background: #F25420 0% 0% no-repeat padding-box;
+    border: 1px solid #F25420;
+    color: #fff;
+    transition: .2s linear;
+
+}
+
+.column1_2 {
+    width: 330px;
+    display: block;
+    float: left;
+    padding-right: 50px;
+    border-right: 1px dashed #707070;
+}
+
+.column1_1 {
+    width: 710px;
+    display: block;
+    float: left;
+    margin-right: 50px;
+}
+
+.input-row {
+    display: flex;
+    border-top: 1px dashed rgba(112, 112, 112, .3);
+    padding: 10px 0px 5px;
+}
+
+.input-row:last-child {
+
+    border-bottom: 1px dashed rgba(112, 112, 112, .3);
+
+}
+
+.input-row .ng-autocomplete {
+    width: 65%;
+}
+
+.input-count {
+    width: calc(35% - 30px);
+}
+
+input#count {
+    width: 50px;
+    height: 29px;
+    float: left;
+    text-align: center;
+    border: 1px solid transparent;
+    background: transparent;
+    color: rgba(22, 22, 22, 1);
+    font-size: 17px;
+    line-height: 29px;
+    font-family: 'HusqvarnaGothic-Regular';
+}
+
+.input-count ul {
+    display: inline-block;
+    border: 1px solid rgba(112, 112, 112, 1);
+    border-radius: 14px;
+}
+
+.input-count ul li {
+    display: inline-block;
+    float: left;
+    border: none;
+    width: 35px;
+    height: 27px;
+}
+
+.input-count ul li button {
+    background: transparent;
+    border: none;
+    padding: 0px 5px;
+    position: relative;
+
+}
+
+.input-count ul li:first-child button i {
+    position: absolute;
+    top: -15px;
+    font-size: 20px;
+    color: rgba(112, 112, 112, 1);
+
+}
+
+.input-count ul li:last-child button i {
+    position: absolute;
+    top: -10px;
+    font-size: 20px;
+    color: rgba(112, 112, 112, 1);
+
+}
+
+.input-row .delete-row {
+    width: 30px;
+}
+
+.input-row .delete-row button {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.input-row .delete-row i {
+    font-size: 20px;
+    color: rgba(112, 112, 112, 1);
+    line-height: 30px;
+}
+
+.ng-autocomplete .autocomplete-container {
+    box-shadow: none !important;
+}
+
+.ng-autocomplete .autocomplete-container .input-container input {
+    font-size: 16px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: none;
+    outline: 0;
+    background-color: transparent;
+    color: rgba(0, 0, 0, .87);
+    width: 100%;
+    padding: 0 15px;
+    line-height: 25px;
+    height: auto;
+    font-family: 'HusqvarnaGothic-Bold';
+}
+
+.upload-invoice {
+    clear: both;
+    margin: 40px 0px 0;
+
+}
+
+.upload-invoice button {
+    clear: both;
+    border: 1px solid rgba(174, 174, 174, 1);
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: 'HusqvarnaGothic-Regular';
+    background: transparent;
+    padding: 10px 15px 10px 45px;
+    background: transparent url(../../assets/images/invoice.png) no-repeat 10px 10px;
+    transition: .2s linear;
+}
+
+.upload-invoice button:hover {
+    border: 1px solid rgba(242, 84, 32, 1);
+    color: rgba(242, 84, 32, 1);
+    transition: .2s linear;
+    background: transparent url(../../assets/images/invoice_active.png) no-repeat 10px 10px;
+}
+
+
+
+.contact-list input {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #AEAEAE;
+    box-shadow: none !important;
+    padding: 5px 0 10px;
+    font-size: 18px;
+    font-family: 'HusqvarnaGothic-Regular';
+    color: #161616;
+    background: transparent url(../../assets/images/contacts.png) no-repeat 98% 5px;
+    margin: 10px 0px 0;
+
+}
+
+.ng-autocomplete.customer-mobile-search,
+.ng-autocomplete.customer-mobile-search .ng-autocomplete {
+    width: 100%;
+}
+
+
+.action-form-button button {
+    font: 15px/15px HusqvarnaGothic-Bold;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    background: rgba(242, 84, 32, 1);
+    padding: 18px 87px;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    transition: 0.2s ease all;
+}
+
+.action-form-button button:hover {
+    background: rgb(226, 90, 46);
+    transition: 0.2s ease all;
+}
+
+.backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+.points-available {
+    display: block;
+    text-align: center;
+    font: 18px/25px HusqvarnaGothic-Regular;
+    color: #2D2D2D;
+}
+
+.points-bold {
+    display: inline-block;
+    font: 18px/25px HusqvarnaGothic-Bold;
+    color: #2D2D2D;
+    padding: 0 10px;
+}
+
+.points-blue {
+    padding: 45px 0px;
+
+}
+
+.redeem-group {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.redeem-group button {
+    display: inline-block;
+    clear: both;
+    width: 273px;
+    background: rgba(242, 84, 32, 1);
+    font-family: 'HusqvarnaGothic-Bold';
+    transition: 0.2s ease all;
+    border: none;
+    padding: 17px 23px;
+    margin: 0px 0 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 17px;
+}
+
+.redeem-group button:hover {
+    background: rgb(226, 90, 46);
+    transition: 0.2s ease all;
+}
+
+.points-blue h4 {
+    font: 18px/25px HusqvarnaGothic-Bold;
+    letter-spacing: 0.36px;
+    color: #1253A1;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.points-blue-text {
+    text-align: center;
+    color: #2D2D2D;
+    letter-spacing: 0.68px;
+    font: 34px/25px HusqvarnaGothic-Regular;
+    border: none;
+    border-bottom: 2px solid #0074FF;
+    padding: 10px 20px 10px;
+    display: inline-block;
+    margin: 0 auto;
+    min-width: 245px;
+    width: 273px;
+}
+
+.otp-wrapper {
+    text-align: center
+}
+
+.otp-wrapper h6 {
+    text-align: center;
+    font: 18px/25px HusqvarnaGothic-Bold;
+    letter-spacing: 0.36px;
+    color: rgba(18, 83, 161, 1);
+    text-transform: uppercase;
+    margin: 25px 0 0;
+}
+
+.otp-dots-row {
+    padding: 25px 0px 15px;
+}
+
+.timer {
+    font: 20px/35px HusqvarnaGothic-Regular;
+    letter-spacing: 0;
+    color: rgba(39, 58, 96, 1);
+    text-transform: uppercase;
+    margin-bottom: 20px
+}
+
+.button-row {
+    clear: both;
+}
+
+button.submit.otp-button {
+    display: inline-block;
+    clear: both;
+    width: 273px;
+    background: rgba(242, 84, 32, 1);
+    font-family: 'HusqvarnaGothic-Bold';
+    transition: 0.2s ease all;
+    border: none;
+    padding: 17px 23px;
+    margin: 0px 0 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 17px;
+}
+
+button.submit.otp-button:hover {
+    background: rgb(226, 90, 46);
+    transition: 0.2s ease all;
+}
+
+button.submit.resend {
+    display: inline-block;
+    clear: both;
+    width: 273px;
+    background: #fff;
+    font-family: 'HusqvarnaGothic-Regular';
+    transition: 0.2s ease all;
+    border: none;
+    padding: 17px 23px;
+    margin: 15px 0 0;
+    color: rgba(242, 84, 32, 1);
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 17px;
+}
+
+ngx-split-input {
+    display: table;
+    margin: 0 auto;
+    text-align: center
+}
+
+ngx-split-input input {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 68px;
+    background: #ccc;
+
+    color: transparent;
+    text-shadow: 0 0 0 rgba(0, 116, 255, 1);
+    border: none;
+    border-radius: 50px;
+    padding: 0;
+    line-height: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    font-family: 'HusqvarnaGothic-Regular';
+    text-indent: -6px;
+}
+
+.snack-bar-reward {
+    background: #0074FF 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    padding: 12px 30px;
+    font: 15px/15px HusqvarnaGothic-Regular;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    position: absolute;
+    transform: translateY(-50px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease all;
+}
+
+.snack-bar-reward .bold {
+    font: 15px/15px HusqvarnaGothic-Bold;
+    letter-spacing: 0.3px;
+}
+
+.snack-bar-reward.slideInUp {
+    animation-name: slidesnack;
+    animation-duration: 0.3s;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s ease all;
+}
+
+
+@keyframes slidesnack {
+    0% {
+        opacity: 0;
+        transform: translateY(0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(-50px)
+    }
+}
+
+@media (max-width:1024px) {
+    .points-redeem button {
+        float: left;
+    }
+
+}
+
+@media (max-width:900px) {
+    .column1_1 {
+        width: 100%;
+        display: block;
+        float: left;
+        margin-right: 0;
+    }
+
+    .content-row {
+        background: #fff;
+    }
+}
+
+@media (max-width:767px) {
+    .column_split {
+        display: block;
+    }
+
+    .customer-mobile {
+        width: 100%;
+        margin-right: 50px;
+    }
+
+    .about-dealer {
+        width: 100%;
+        padding: 25px 0px;
+        border: none;
+        border-top: 1px dashed #707070;
+        border-bottom: 1px dashed #707070;
+        margin: 15px 0px;
+    }
+
+    .points-redeem {
+        width: 100%;
+        padding: 0 10px 0 0px;
+        display: block;
+        overflow: auto;
+    }
+
+    .snack-bar-reward {
+        transform: translateY(0px);
+        transform: translateX(200px);
+        transition: 0.2s ease all;
+    }
+
+    @keyframes slidesnack {
+        0% {
+            opacity: 0;
+            transform: translateY(0);
+            transform: translateX(0);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+            transform: translateX(200px);
+        }
+    }
+}
+
+@media (max-width:663px) {
+    .content-row {
+        padding: 50px 30px;
+        overflow: auto;
+    }
+
+    .content-row.grey-backgorund {
+        padding: 50px 30px;
+        overflow: auto;
+    }
+
+    .column1_2 {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .input-row .ng-autocomplete {
+        width: 55%;
+    }
+
+    .input-count {
+        width: calc(45% - 30px);
+    }
+
+    .referredby input {
+        margin: 10px 0 0;
+    }
+
+    .snack-bar-reward {
+        transform: translateX(0px);
+        transform: translateY(70px);
+        transition: 0.2s ease all;
+    }
+
+    @keyframes slidesnack {
+        0% {
+            opacity: 0;
+            transform: translateX(0);
+            transform: translateY(0);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0px);
+            transform: translateY(70px);
+        }
+    }
+}
+
+@media (max-width:360px) {
+    .input-count ul li {
+        width: 25px;
+        height: 27px;
+    }
+
+    .input-count ul li:first-child button i {
+        position: absolute;
+        top: -12px;
+        font-size: 17px;
+        color: rgba(112, 112, 112, 1);
+    }
+
+    .input-count ul li:last-child button i {
+        position: absolute;
+        top: -7px;
+        font-size: 17px;
+        color: rgba(112, 112, 112, 1);
+    }
+
+    .action-form-button button {
+        width: 100%;
+    }
+
+}

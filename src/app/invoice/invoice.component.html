@@ -1,0 +1,132 @@
+<div class="invoice-wrapper">
+    <div class="content-row">
+        <h4 class="greetings">NEW SALE INVOICE</h4>
+        <div class="column_split">
+            <div class="customer-mobile">
+                <div class="customer-mobile-text">Customer Mobile Number*</div>
+                <div class="contact-list">
+                    <div class="ng-autocomplete customer-mobile-search">
+                        <ng-autocomplete [data]="datacustomer" [searchKeyword]="mobile" [itemTemplate]="itemTemplate1" [placeHolder]="placeHolder1"
+                            [notFoundTemplate]="notFoundTemplate">
+                        </ng-autocomplete>
+                    
+                        <ng-template #itemTemplate1 let-item>
+                            <a [innerHTML]="item.number"></a>
+                            <span [innerHTML]="item.name"></span>
+                        </ng-template>
+                    
+                        <ng-template #notFoundTemplate let-notFound>
+                            <div [innerHTML]="notFound"></div>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+            <div class="about-dealer">
+                <h4 class="dealer-name">Bharat Raj Kumar <button class="edit"><i class="material-icons">
+                    edit
+                </i></button></h4>
+                <h5 class="dealer-address">Building Contractor, Perambur, Chennai</h5>
+                <h6 class="dealer-email">bharatbc@gmail.com</h6>
+            </div>
+            <div class="points-redeem">
+                <div class="snack-bar-reward" id="redeem-snack"><span class="bold">1,10,000</span> Points Redeemed</div>
+                <h4>Available Points</h4>
+                <div class="points">1,10,500</div><button (click)="open(content)">REDEEM</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- content new row -->
+    <div class="content-row grey-backgorund">
+        <h4 class="greetings">Product Purchased</h4>
+        <div class="formrow">
+            <div class="column1_1">
+                <div class="input-row">
+                    <div class="ng-autocomplete">
+                        <ng-autocomplete [data]="data"[searchKeyword]="keyword"  [placeHolder]="placeHolder" [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
+                        </ng-autocomplete>
+
+                        <ng-template #itemTemplate let-item>
+                            <a [innerHTML]="item.name"></a>
+                        </ng-template>
+
+                        <ng-template #notFoundTemplate let-notFound>
+                            <div [innerHTML]="notFound"></div>
+                        </ng-template>
+                    </div>
+                    <div class="input-count">
+                        <input type="text" size="25" value="1" id="count">
+                    </div>
+                    <div class="delete-row">
+                        <button class="x">
+                            <i class="material-icons">close</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- invoice section -->
+        <div class="upload-invoice">
+            <button class="upload-invoice">Upload Invoice *</button>
+        </div>
+        <!-- invoice section -->
+    </div>
+
+    <!-- content new row -->
+    <div class="content-row">
+        
+        <div class="action-form-button">
+            <button>SUBMIT</button>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #content let-modal>
+
+        <button type="button" class="close modal-close" aria-label="Close" (click)="modal.dismiss('Cross click');closeModal();">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+    <div class="modal-body">
+        <div class="redeem-points" *ngIf="showForm" [@FadeAnimation]>
+            <div class="redeem-group">
+                <div class="points-available">Available Points: <div class="points-bold">1,10,500</div></div>
+                <div class="points-blue">
+                    <h4>Points to Redeem</h4>
+                    <input class="points-blue-text" type="text" value="50000">
+                </div>
+                <button (click)="toggleOtp()">REDEEM</button>
+            </div>
+        </div>
+        <div class="redeem-otp">
+            <div class="otp-wrapper" *ngIf="showOtp" [@FadeAnimation]>
+                <div class="points-available">OTP Sent to 
+                    <div class="points-bold">98840 12345</div>
+                </div>
+                <h6>Enter OTP</h6>
+                <div class="otp-dots-row">
+                    <ngx-split-input>
+                        <input ngxSplitInput type="password" maxlength="1">
+                        <input ngxSplitInput type="password" maxlength="1">
+                        <input ngxSplitInput type="password" maxlength="1">
+                        <input ngxSplitInput type="password" maxlength="1">
+                        <input ngxSplitInput type="password" maxlength="1">
+                        <input ngxSplitInput type="password" maxlength="1">
+                    </ngx-split-input>
+                </div>
+                <div class="timer">
+                    4:45
+                </div>
+                <div class="button-row">
+                    <button class="submit otp-button" otp-button (click)="redeemPoints()">Submit</button>
+                </div>
+                <div class="button-row">
+                    <button class="submit resend">Resend otp</button>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+
+</ng-template>

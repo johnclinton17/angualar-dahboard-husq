@@ -1,1 +1,316 @@
 /* You can add global styles to this file, and also import other style files */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+body {
+    height: auto;
+}
+
+body {
+    margin: 0;
+    font-family: 'HusqvarnaGothic-Regular';
+}
+
+:focus {
+    outline: none !Important;
+}
+
+/* custom fonts */
+@font-face {
+    font-family: 'HusqvarnaGothic-Bold';
+    src: url('assets/fonts/HusqvarnaGothic-Bold.woff') format('woff');
+    src: url('assets/fonts/HusqvarnaGothic-Bold.woff2') format('woff2'), url('assets/fonts/HusqvarnaGothic-Bold.eot?#iefix') format('eot'), url('assets/fonts/HusqvarnaGothic-Bold.svg#HusqvarnaGothic-Bold') format('svg'), ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HusqvarnaGothic-Regular';
+    src: url('assets/fonts/HusqvarnaGothic-Regular.woff') format('woff');
+    src: url('assets/fonts/HusqvarnaGothic-Regular.woff2') format('woff2'), url('assets/fonts/HusqvarnaGothic-Regular.eot?#iefix') format('eot'), url('assets/fonts/HusqvarnaGothic-Regular.svg#HusqvarnaGothic-Regular') format('svg'), ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HusqvarnaGothic-Light';
+    src: url('assets/fonts/HusqvarnaGothic-Light.woff') format('woff');
+    src: url('assets/fonts/HusqvarnaGothic-Light.woff2') format('woff2'), url('assets/fonts/HusqvarnaGothic-Light.eot?#iefix') format('eot'), url('assets/fonts/HusqvarnaGothic-Light.svg#HusqvarnaGothic-Light') format('svg'), ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.input-error {
+    padding: 15px 0px 0;
+    font-size: 15px;
+    color: red;
+}
+
+router-outlet~* {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.ng-autocomplete .autocomplete-container .input-container input {
+    font-size: 16px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: none;
+    outline: 0;
+    background-color: transparent;
+    color: rgba(0, 0, 0, .87);
+    width: 100%;
+    padding: 0 15px;
+    line-height: 29px;
+    height: auto;
+    font-family: 'HusqvarnaGothic-Bold';
+}
+
+.customer-mobile-search .ng-autocomplete .autocomplete-container .input-container input {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #AEAEAE;
+    box-shadow: none !important;
+    padding: 5px 0 10px;
+    font-size: 18px;
+    font-family: 'HusqvarnaGothic-Regular';
+    color: #161616;
+    background: transparent url(assets/images/contacts.png) no-repeat 98% 5px;
+}
+
+
+.ng-autocomplete .autocomplete-container {
+    box-shadow: none;
+    position: relative;
+    overflow: visible;
+    height: auto;
+}
+
+.ng-autocomplete .autocomplete-container .input-container .x {
+    display: none;
+}
+
+.ng-autocomplete .autocomplete-container .suggestions-container ul li a {
+    padding: 15px 150px 15px 15px;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, .87);
+    font-size: 15px;
+    font-family: 'HusqvarnaGothic-Bold';
+    position: relative;
+}
+
+.ng-autocomplete .autocomplete-container .suggestions-container ul li {
+    position: relative;
+}
+
+.ng-autocomplete .autocomplete-container .suggestions-container ul li span {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 150px;
+    font-size: 15px;
+    font-family: 'HusqvarnaGothic-Bold';
+    text-align: right;
+}
+
+.modal-backdrop {
+    background: #AEAEAE 0% 0% no-repeat padding-box;
+    opacity: 1;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.modal-backdrop.show {
+    z-index: 9999 !important;
+}
+
+.modal-open .modal {
+    z-index: 99999 !important;
+}
+
+.modal-holder {
+    animation-name: example;
+    animation-duration: 0.3s;
+}
+
+.modal-dialog {
+    max-width: 600px;
+}
+
+.modal-body {
+    padding: 75px 100px 20px;
+    min-height: 435px;
+}
+
+button.close.modal-close {
+    font-size: 30px;
+    position: absolute;
+    right: 25px;
+    top: 16px;
+    color: #000;
+    opacity: 1;
+    z-index: 99;
+    font-family: 'HusqvarnaGothic-Regular';
+    transition: .2s linear;
+}
+
+button.close.modal-close:hover {
+    color: rgba(242, 84, 32, 1);
+    transition: .2s linear;
+}
+
+
+@keyframes example {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width:663px) {
+    body {
+        /* background: rgba(39, 58, 96, 1); */
+        margin: 0
+    }
+}

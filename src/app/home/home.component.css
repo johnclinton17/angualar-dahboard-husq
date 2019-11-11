@@ -1,0 +1,241 @@
+.home-wrapper {
+    padding: 50px 20px 10px 80px
+}
+
+h4.greetings {
+    text-align: left;
+    font: 22px/25px HusqvarnaGothic-Bold;
+    color: rgba(18, 83, 161, 1);
+    margin-bottom: 20px;
+}
+
+.account_summary p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 35px;
+    color: rgba(45, 45, 45, .8);
+}
+
+.account_summary span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 35px;
+    color: rgba(45, 45, 45, .8);
+    text-transform: uppercase;
+    padding: 0 10px;
+}
+
+.box_menu.joint_box {
+    max-width: 454px;
+    min-height: 160px;
+    float: left;
+    width: 100%;
+    margin-right: 15px
+}
+
+.box_menu.joint_box ul {
+    background: rgba(235, 240, 250, 1) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    display: flex
+}
+
+.box_menu.joint_box ul li {
+    width: 50%;
+    border-right: 1px solid rgba(18, 83, 161, .15);
+    padding: 28px 35px;
+    min-height: 160px;
+}
+
+.box_menu.joint_box ul li:last-child {
+    border-right: 0
+}
+
+.box-icon {
+    display: block;
+    height: 35px;
+}
+
+.box_menu.joint_box ul li:first-child .box-icon {
+    background: transparent url(/assets/images/customers.png)no-repeat 0 0;
+}
+
+.box_menu.joint_box ul li:last-child .box-icon {
+    background: transparent url(/assets/images/redemption.png)no-repeat 0 0px;
+}
+
+.content_right {
+    text-align: right;
+}
+
+.count_number {
+    font: 40px/40px HusqvarnaGothic-Light;
+    color: rgba(45, 45, 45, 1);
+    margin: 10px 0 0;
+}
+
+.count_text {
+    font: 15px/20px HusqvarnaGothic-Bold;
+    color: rgba(45, 45, 45, 1);
+    text-transform: uppercase
+}
+
+.box_menu.seperate_box {
+    float: left;
+    width: 49%;
+}
+
+a.seperate_menu_button {
+    background: rgba(243, 110, 66, 1) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    margin: 0 15px;
+    min-height: 160px;
+    max-width: 160px;
+    width: 100%;
+    float: left;
+    padding: 30px 35px;
+    font: 18px/20px HusqvarnaGothic-Bold;
+    color: rgba(255, 255, 255, 1);
+    transition: 0.2s linear;
+
+}
+
+a.seperate_menu_button:hover {
+    background: rgba(242, 84, 32, 1) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    transition: 0.2s linear;
+    text-decoration: none;
+
+}
+
+a.seperate_menu_button .image-icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 0 30px;
+}
+
+a.seperate_menu_button:first-child .image-icon {
+    background: transparent url(/assets/images/customer-orange.png)no-repeat 0 0;
+}
+
+a.seperate_menu_button:last-child .image-icon {
+    background: transparent url(/assets/images/invoice-orange.png)no-repeat 0 0;
+}
+
+.account_summary {
+    overflow: auto;
+}
+
+.referral_count {
+    margin: 25px 0px;
+    text-align: left;
+    font: 16px/25px HusqvarnaGothic-Regular;
+    color: rgba(18, 83, 161, 1);
+    font-style: italic;
+    padding-left: 30px;
+    background: transparent url(/assets/images/referral-icon.png)no-repeat 0 2px;
+}
+
+@media (max-width:1025px) {
+    .box_menu.joint_box {
+        max-width: 375px;
+    }
+
+    a.seperate_menu_button {
+        min-height: 160px;
+        max-width: 150px;
+        font: 16px/18px HusqvarnaGothic-Bold;
+    }
+}
+
+@media (max-width:992px) {
+    .box_menu.joint_box {
+        max-width: 320px;
+        margin-right: 10px
+    }
+
+    a.seperate_menu_button {
+        min-height: 160px;
+        max-width: 150px;
+        font: 16px/18px HusqvarnaGothic-Bold;
+        margin: 0 10px;
+    }
+
+    .box_menu.joint_box ul li {
+        padding: 28px 25px;
+    }
+
+    .count_number {
+        font: 35px/40px HusqvarnaGothic-Light;
+    }
+}
+
+@media (max-width:800px) {
+    .box_menu.seperate_box {
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    a.seperate_menu_button:first-child {
+        margin: 0 10px 0 0
+    }
+}
+
+@media (max-width:663px) {
+    .home-wrapper {
+        padding: 30px 30px 20px;
+    }
+
+    h4.greetings {
+        color: #fff;
+        margin-bottom: 5px;
+    }
+
+    .account_summary p {
+        color: #fff;
+        margin: 0 0 10px;
+    }
+
+    .account_summary span {
+        color: #fff;
+        padding: 0 0px;
+        float: right;
+    }
+
+    a.seperate_menu_button {
+        background: rgba(242, 84, 32, 1) 0% 0% no-repeat padding-box;
+        border-radius: 0px;
+        margin: 10px 0px !important;
+        min-height: auto;
+        max-width: 100%;
+        width: 100%;
+        padding: 15px 15px;
+        font: 18px/28px HusqvarnaGothic-Bold;
+        color: rgba(255, 255, 255, 1);
+        transition: 0.2s linear;
+    }
+
+    a.seperate_menu_button .image-icon {
+        width: 25px;
+        height: 25px;
+        margin: 0;
+        float: left;
+        margin-right: 25px;
+        display: block;
+    }
+
+    .content_right {
+        text-align: left;
+    }
+
+    .referral_count {
+        color: #fff;
+        font: 15px/25px HusqvarnaGothic-Regular;
+        padding-left: 25px;
+        background: transparent url(/assets/images/referral-icon.png)no-repeat 0 2px;
+        overflow: auto;
+    }
+}

@@ -1,0 +1,104 @@
+.header-login {position: absolute;z-index: 999;background: transparent;top: 40px;padding: 0 40px;width: 100%;left: 0;}
+.background-login{background: url(/assets/images/login-banner@2x.png) no-repeat center / cover;height: 100vh;position: relative;}
+.background-login:after{background: transparent linear-gradient(181deg, #273A6000 0%, #273A60 100%) 0% 0% no-repeat padding-box;content: '';position: absolute;display: block;height: 312px;width: 100%;bottom: 0;left: 0;}
+.dropdown .dropdown-menu {transition: all 0.5s;overflow: hidden;transform-origin: top center;transform: scale(1, 0);display: block;top: 15px;padding: 0;}
+.dropdown:hover .dropdown-menu {transform: scale(1);}
+.dropdown-toggle::after{display: none}
+.dropdown-item {padding: 10px;font-family: 'Roboto', sans-serif;font-weight: 500;color: rgba(45, 45, 45, .80);font-size: 13px;}
+.dropdown-item:hover {padding: 10px;font-family: 'Roboto', sans-serif;font-weight: 500;color: rgba(45, 45, 45, .80);font-size: 13px;background:rgba(39, 58, 96,.6)}
+.login-nav{width: 100%;}
+.logo{display: inline-block;float: left;}
+.login-right{display: inline-block;float: right;min-width: 150px;min-height: 20px;}
+button.language-button{display: inline-block;font-family: 'Roboto', sans-serif;font-weight: 500;color: rgba(45, 45, 45, .80);font-size: 13px;float: right;background: transparent url(/assets/images/dropdown-arow.png)no-repeat 95% 3px;border: none;padding: 0px 25px 0px 10px;}
+.content-login .wrapper{padding: 142px 420px 0 160px;overflow: hidden;}
+.content-login h1{text-align: left;font: 50px/50px HusqvarnaGothic-Bold;letter-spacing: 0;color: rgba(39, 58, 96, 1);text-transform: uppercase;padding: 0 60px 0 0;margin: 0 0 10px;}
+.content-login h5{text-align: left;font: 20px/25px HusqvarnaGothic-Regular;letter-spacing: 0;color: rgba(39, 58, 96, 1);text-transform: uppercase;padding: 0 180px 0 0;margin: 0 0 10px;}
+.form-login {padding: 35px 0 60px;width: 275px;}
+.user-input-wrp {position: relative;}
+.user-input-wrp .inputText{width: 100%;outline: none;border:none;border-bottom: 2px solid #777;box-shadow: none !important;padding:20px 0 10px;font-size: 16px;font-family: 'HusqvarnaGothic-Regular';color:rgba(39, 58, 96, 1);}
+.user-input-wrp .inputText:focus{border-bottom: 2px solid rgba(0, 116, 255, 1);}
+.user-input-wrp .floating-label {position: absolute;pointer-events: none;top: 18px;left: 0px;transition: 0.2s ease all;font-size: 16px;font-family: 'HusqvarnaGothic-Regular';color: rgba(139, 139, 139, 1);}
+.user-input-wrp input:focus ~ .floating-label,.user-input-wrp input:not(:focus):valid ~ .floating-label{top: 0px;left: 0px;font-size: 14px;opacity: 1;}
+button.submit.login{background:rgba(242, 84, 32, 1) url(/assets/images/right-arrow.png) no-repeat 90% 6px;font-family: 'HusqvarnaGothic-Bold';transition: 0.2s ease all;border: none;padding: 17px 23px;width: 100%;margin: 50px 0 0;text-align: left;color: #fff;text-transform: uppercase;font-size: 15px;line-height: 17px;}
+button.submit.login:hover{background:rgba(242, 84, 32, 1) url(/assets/images/right-arrow.png) no-repeat 95% 6px;transition: 0.2s ease all;}
+
+.content-login .otp-wrapper{padding: 142px 160px;text-align: center}
+.content-login .otp-wrapper h6{text-align: center;font:18px/25px HusqvarnaGothic-Bold;letter-spacing: 0.36px;color: rgba(18, 83, 161, 1);text-transform: uppercase;}
+
+.otp-dots-row {padding: 50px 0px;}
+
+.timer{font: 20px/35px HusqvarnaGothic-Regular;letter-spacing: 0;color: rgba(39, 58, 96, 1);text-transform: uppercase;margin-bottom: 50px}
+.button-row{clear: both;}
+
+button.submit.otp-button {display: inline-block;clear: both;width: 273px;background:rgba(242, 84, 32, 1);font-family: 'HusqvarnaGothic-Bold';transition: 0.2s ease all;border: none;padding: 17px 23px;margin: 0px 0 0;color: #fff;text-transform: uppercase;font-size: 15px;line-height: 17px;}
+button.submit.otp-button:hover {background:rgb(226, 90, 46);transition: 0.2s ease all;}
+button.submit.resend{display: inline-block;clear: both;width: 273px;background:#fff;font-family: 'HusqvarnaGothic-Regular';transition: 0.2s ease all;border: none;padding: 17px 23px;margin: 15px 0 0;color:rgba(242, 84, 32, 1);text-transform: uppercase;font-size: 15px;line-height: 17px;}
+
+ngx-split-input{display: table;margin: 0 auto;text-align: center}
+
+ngx-split-input input {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 68px;
+    background: #ccc;
+
+    color : transparent;
+    text-shadow : 0 0 0 rgba(0, 116, 255, 1);
+    border: none;
+    border-radius: 50px;
+    padding: 0;
+    line-height: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;font-family: 'HusqvarnaGothic-Regular';text-indent: -6px;
+}
+
+@media (max-width:1680px){
+        .content-login .wrapper{padding: 142px 280px 0 160px;}
+}
+
+@media (max-width:1400px){
+        .content-login .wrapper{padding: 142px 160px 0;}
+}
+
+@media (max-width:1025px){
+    .content-login h5{padding: 0 40px 0 0;}
+    .content-login .wrapper {padding: 142px 100px 0;}
+    .content-login .otp-wrapper {padding: 142px 50px;}
+}
+
+@media (max-width:768px){
+    .content-login .wrapper {padding: 142px 50px 0;}
+}
+
+@media (max-width:663px){
+    .content-login{padding: 0;}
+    .content-login .wrapper{padding: 50px 50px 0;}
+    button.language-button {color: #fff;font-size: 13px;text-transform: uppercase;}
+    .background-login {display: none;}
+    .content-login  {padding:270px 55px 0;background: url(/assets/images/login-banner@2x.png) no-repeat 0 0 / 100%;min-height: 100vh;}
+    .content-login .wrapper{z-index: 10;position: relative;}
+    .content-login:before {background: rgba(39, 58, 96, 1);content: '';position: absolute;display: block;height: 70%;width: 100%;bottom: 0;left: 0;right: 0;z-index: 1;}
+    .content-login h1 {color: #fff;font: 45px/45px HusqvarnaGothic-Bold;}
+    .content-login h5{color: #fff;font: 17px/23px HusqvarnaGothic-Regular;}
+    .form-login {padding: 35px 0;width: 100%;}
+    .user-input-wrp .inputText {border-bottom: 2px solid #fff;color: #fff;background: transparent;}
+    .user-input-wrp .floating-label{color: #fff}
+    .user-input-wrp .inputText:focus {border-bottom: 2px solid rgba(242, 84, 32, 1);}
+    button.submit.login {margin: 40px 0 0;}
+    .content-login.otpOpened {padding: 0;background:  rgba(39, 58, 96, 1);width: 100%;z-index: 999;}
+    .content-login.otpOpened:before {display:none;}
+    .content-login .otp-wrapper h6 {color: #fff;}
+    .timer {color: #fff;}
+    button.submit.resend{background: transparent;}
+    ngx-split-input input {color: transparent;text-shadow: 0 0 0 rgba(242, 84, 32, 1);}
+
+    
+}
+@media (max-width:320px){
+    .content-login .otp-wrapper {padding: 142px 20px;}
+    button.submit.otp-button,button.submit.resend {width: 100%;}
+
+    
+}
+

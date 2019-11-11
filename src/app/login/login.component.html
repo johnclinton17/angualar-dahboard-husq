@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <div class="header-login">
+        <div class="row">
+            <nav class="login-nav">
+                <a class="" href="#">
+                    <div class="logo">
+                        <img src="../assets/images/logo.svg" alt="logo">
+                    </div>
+                </a>
+                <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+            
+                <ul class="login-right">
+                    <div class="dropdown">
+                        <button type="button" class="language-button dropdown-toggle" data-toggle="dropdown">
+                            English
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Hindi</a>
+                            <a class="dropdown-item" href="#">French</a>
+                        </div>
+                    </div>
+                </ul>
+                
+            </nav>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-md-5 background-login"></div>
+            <div class="col-md-7 content-login"  id="otp-container">
+                <div class="wrapper" *ngIf="showForm" [@FadeAnimation]>
+                    <h1>Grow with Husqvarna</h1>
+                    <h5>With you and us, it’s a great partnership for a profitable future.</h5>
+
+                    <div class="form-login">
+                        <div class="user-input-wrp">
+                            <input type="tel" class="inputText" required/>
+                            <span class="floating-label">Enter Mobile Number</span>
+                            <div class="input-error" >
+                                Enter a valid mobile number
+                            </div>
+                        </div>
+                        <button class="submit login" (click)="toggleOtp()">Continue</button>
+                    </div>
+                </div>
+                <div class="otp-wrapper" *ngIf="showOtp" [@FadeAnimation]>
+                    <h6>Enter OTP</h6>
+                    <div class="otp-dots-row">
+                        <ngx-split-input >
+                            <input ngxSplitInput type="password" maxlength="1">
+                            <input ngxSplitInput type="password" maxlength="1">
+                            <input ngxSplitInput type="password" maxlength="1">
+                            <input ngxSplitInput type="password" maxlength="1">
+                            <input ngxSplitInput type="password" maxlength="1">
+                            <input ngxSplitInput type="password" maxlength="1">
+                        </ngx-split-input>
+                    </div>
+                    <div class="timer">
+                        4:45
+                    </div>
+                    <div class="button-row">
+                         <button class="submit otp-button" otp-button (click)="login()">Submit</button>
+                    </div>
+                     <div class="button-row">
+                        <button class="submit resend">Resend otp</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>

@@ -1,0 +1,151 @@
+<div class="customer-wrapper">
+    <div class="content-row">
+        <h4 class="greetings">NEW CUSTOMER</h4>
+        <div class="formrow">
+            <div class="column1_2">
+                <div class="user-input-wrp">
+                    <input type="tel" class="inputText" required/>
+                    <span class="floating-label">Mobile Number *</span>
+                    <!-- <div class="input-error" >Enter a valid Mobile Number</div> -->
+                </div>
+            </div>
+        </div>
+        <div class="formrow">
+            <div class="column1_2">
+                <div class="user-input-wrp">
+                    <input type="text" class="inputText" required/>
+                    <span class="floating-label">Customer Name *</span>
+                    <!-- <div class="input-error" >Enter a valid Name</div> -->
+                </div>
+                <div class="user-input-wrp">
+                    <input type="text" class="inputText" required/>
+                    <span class="floating-label">Location</span>
+                    <!-- <div class="input-error" >Enter a valid Location</div> -->
+                </div>
+            </div>
+            <div class="column1_2">
+                <div class="user-input-wrp">
+                    <input type="email" class="inputText" required/>
+                    <span class="floating-label">Email Address</span>
+                    <!-- <div class="input-error" >Enter a valid Email</div> -->
+                </div>
+                <div class="user-input-wrp">
+                    <select name="Occupation" class="select inputText">
+                        <option selected>Occupation</option>
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                        <option value="manager">Manager</option>
+                    </select>
+                    <!-- <div class="input-error" >Enter a valid Occupation</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content new row -->
+    <div class="content-row grey-backgorund">
+        <h4 class="greetings">Product Purchased</h4>
+        <div class="formrow">
+            <div class="column1_1">
+                <div class="input-row">
+                    <div class="ng-autocomplete">
+                        <ng-autocomplete [data]="data" [searchKeyword]="keyword"  [itemTemplate]="itemTemplate" [placeHolder]="placeHolder" [notFoundTemplate]="notFoundTemplate">
+                        </ng-autocomplete>
+                    
+                        <ng-template #itemTemplate let-item>
+                            <a [innerHTML]="item.name"></a>
+                        </ng-template>
+                    
+                        <ng-template #notFoundTemplate let-notFound>
+                            <div [innerHTML]="notFound"></div>
+                        </ng-template>
+                    </div>
+                    <div class="input-count">
+                        <input type="text" size="25" value="1" id="count">
+                        <ul>
+                            <li><button class="increment_button"><i class="material-icons">
+                                minimize
+                            </i></button></li>
+                            <li><button class="increment_button"><i class="material-icons">add</i></button></li>
+                        </ul>
+                    </div>
+                    <div class="delete-row">
+                        <button class="x" >
+                            <i class="material-icons">close</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="ng-autocomplete">
+                        <ng-autocomplete [data]="data" [searchKeyword]="keyword" [itemTemplate]="itemTemplate" [placeHolder]="placeHolder" [notFoundTemplate]="notFoundTemplate">
+                        </ng-autocomplete>
+                
+                        <ng-template #itemTemplate let-item>
+                            <a [innerHTML]="item.name"></a>
+                        </ng-template>
+                
+                        <ng-template #notFoundTemplate let-notFound>
+                            <div [innerHTML]="notFound"></div>
+                        </ng-template>
+                    </div>
+                    <div class="input-count">
+                        <input type="text" size="25" value="1" id="count">
+                        <!-- <ul>
+                            <li>
+                                <button class="increment_button">
+                                    <i class="material-icons">
+                                        minimize
+                                    </i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="increment_button">
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </li>
+                        </ul> -->
+                    </div>
+                    <div class="delete-row">
+                        <button class="x">
+                            <i class="material-icons">close</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- invoice section -->
+        <div class="upload-invoice">
+            <button class="upload-invoice">Upload Invoice *</button>
+        </div>
+        <!-- invoice section -->
+    </div>
+
+    <!-- content new row -->
+    <div class="content-row referredby-row">
+        <div class="referredby">
+            <div class="refered-text">Referred by</div>
+            <div class="column1_2">
+                <div class="ng-autocomplete customer-mobile-search">
+                    <ng-autocomplete [data]="datacustomer" [searchKeyword]="mobile" [itemTemplate]="itemTemplate1" [placeHolder]="placeHolder1" [notFoundTemplate]="notFoundTemplate">
+                    </ng-autocomplete>
+                
+                    <ng-template #itemTemplate1 let-item>
+                        <a [innerHTML]="item.number"></a><span [innerHTML]="item.name"></span>
+                    </ng-template>
+                
+                    <ng-template #notFoundTemplate let-notFound>
+                        <div [innerHTML]="notFound"></div>
+                    </ng-template>
+                </div>
+                
+            </div>
+        </div>
+        <div class="action-form-button">
+            <button>SUBMIT</button>
+        </div>
+    </div>
+
+    
+
+
+
+</div>
