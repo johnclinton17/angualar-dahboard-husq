@@ -37,11 +37,17 @@
     height: 50px;
     width: 100%;
     border: none;
-    margin: 5px 0
+    margin: 5px 0;
+    transition: .2s linear;
 }
 
 .sidebar-menu li button.new_customer {
     background: url(../assets/images/new_customer.png) no-repeat center
+}
+
+.sidebar-menu li:hover button.new_customer {
+    background: url(../assets/images/new_customer_active.png) no-repeat center;
+    transition: .2s linear;
 }
 
 .sidebar-menu li button.new_customer.active {
@@ -52,12 +58,22 @@
     background: url(../assets/images/new_invoice.png) no-repeat center
 }
 
+.sidebar-menu li:hover button.new_invoice {
+    background: url(../assets/images/new_invoice_active.png) no-repeat center;
+    transition: .2s linear;
+}
+
 .sidebar-menu li button.new_invoice.active {
     background: url(../assets/images/new_invoice_active.png) no-repeat center
 }
 
 .sidebar-menu li button.refer_friend {
     background: url(../assets/images/refer_friend.png) no-repeat center
+}
+
+.sidebar-menu li:hover button.refer_friend {
+    background: url(../assets/images/refer_friend_active.png) no-repeat center;
+    transition: .2s linear;
 }
 
 .sidebar-menu li button.refer_friend.active {
@@ -68,6 +84,11 @@
     background: url(../assets/images/users.png) no-repeat center
 }
 
+.sidebar-menu li:hover button.users {
+    background: url(../assets/images/users_active.png) no-repeat center;
+    transition: .2s linear;
+}
+
 .sidebar-menu li button.users.active {
     background: url(../assets/images/users_active.png) no-repeat center
 }
@@ -76,13 +97,44 @@
     background: url(../assets/images/home.png) no-repeat center
 }
 
+.sidebar-menu li:hover button.home {
+    background: url(../assets/images/home_active.png) no-repeat center;
+    transition: .2s linear;
+}
+
 .sidebar-menu li button.home.active {
     background: url(../assets/images/home_active.png) no-repeat center
 }
 
-/* .sidebar-menu li button.home.active {
-    background: url(../assets/images/home_active.png) no-repeat center
-} */
+.sidebar-menu li button.products {
+    background: url(../assets/images/products.png) no-repeat center
+}
+
+.sidebar-menu li:hover button.products {
+    background: url(../assets/images/products_active.png) no-repeat center;
+    transition: .2s linear;
+
+}
+
+.sidebar-menu li button.products.active {
+    background: url(../assets/images/products_active.png) no-repeat center
+}
+
+.sidebar-menu li button.refer_product {
+    background: url(../assets/images/refer_product.png) no-repeat center
+}
+
+.sidebar-menu li:hover button.refer_product {
+    background: url(../assets/images/refer_product_active.png) no-repeat center;
+    transition: .2s linear;
+
+}
+
+.sidebar-menu li button.refer_product.active {
+    background: url(../assets/images/refer_product_active.png) no-repeat center
+}
+
+
 
 .main-content {
     position: relative;
@@ -122,12 +174,12 @@ nav.navbar.fixed-top:after {
     transform-origin: top center;
     transform: scale(1, 0);
     display: block;
-    top: 20px;
+    top: 27px;
     padding: 0
 }
 
 .dropdown:hover .dropdown-menu {
-    transform: scale(1)
+    transform: scale(1, 1)
 }
 
 .dropdown-toggle::after {
@@ -158,9 +210,9 @@ button.language-button {
     color: rgba(45, 45, 45, .80);
     font-size: 13px;
     float: right;
-    background: transparent url(/assets/images/dropdown-arow.png)no-repeat 95% 7px;
+    background: transparent url(/assets/images/dropdown-arow.png)no-repeat 95% 9px;
     border: none;
-    padding: 5px 25px 5px 10px;
+    padding: 7px 30px 7px 10px;
     transition: .2s linear;
 }
 
@@ -265,10 +317,12 @@ button.toggle-button {
     }
 
     .content-outlet {
-        padding: 155px 0 20px;
+        /* padding: 155px 0 20px; */
         background: rgba(39, 58, 96, 1);
         margin: 0
     }
+
+    
 
     body {
         background: rgba(39, 58, 96, 1);

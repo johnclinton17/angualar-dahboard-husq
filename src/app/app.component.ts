@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router,NavigationEnd } from '@angular/router';
 import { trigger, transition, animate, style,query } from '@angular/animations';
 import { fadeAnimation } from './animation';
+import { TooltipModule } from 'ng2-tooltip-directive';
 
 
 @Component({
@@ -15,6 +16,8 @@ import { fadeAnimation } from './animation';
 
 export class AppComponent {
   hideHeader;
+  dealer = true;
+  customer = false;
   constructor(private router: Router) {    // put your code here
     router.events.subscribe((val) => {
       // see also 

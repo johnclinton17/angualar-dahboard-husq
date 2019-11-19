@@ -1,0 +1,149 @@
+<div class="customer-wrapper" *ngIf="refer_screen" [@FadeAnimation]>
+    <div class="content-row">
+        <h4 class="greetings">REFER A FRIEND</h4>
+        <div class="reward-point-icon">Earn 100 Bonus Points by referring a friend</div>
+        <div class="formrow">
+            <div class="column1_2">
+                <div class="user-input-wrp">
+                    <input type="text" class="inputText" required/>
+                    <span class="floating-label">Friend’s Name</span>
+                    <!-- <div class="input-error" >Enter a valid Mobile Number</div> -->
+                </div>
+            </div>
+        </div>
+        <div class="formrow">
+            <div class="column1_2">
+                <div class="user-input-wrp">
+                    <div class="customer-mobile">
+                        <div class="customer-mobile-text">Customer Mobile Number*</div>
+                        <div class="contact-list">
+                            <div class="ng-autocomplete customer-mobile-search">
+                                <ng-autocomplete [data]="datacustomer" [searchKeyword]="mobile" [itemTemplate]="itemTemplate1" [placeHolder]="placeHolder1"
+                                    [notFoundTemplate]="notFoundTemplate">
+                                </ng-autocomplete>
+                    
+                                <ng-template #itemTemplate1 let-item>
+                                    <a [innerHTML]="item.number"></a>
+                                    <span [innerHTML]="item.name"></span>
+                                </ng-template>
+                    
+                                <ng-template #notFoundTemplate let-notFound>
+                                    <div [innerHTML]="notFound"></div>
+                                </ng-template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-input-wrp">
+                    <input type="text" class="inputText" required/>
+                    <span class="floating-label">Friend’s Location</span>
+                    <!-- <div class="input-error" >Enter a valid Location</div> -->
+                </div>
+            </div>
+            <div class="column1_2">
+                <div class="user-input-wrp">
+                    <input type="email" class="inputText" required/>
+                    <span class="floating-label">Friend’s Email Address</span>
+                    <!-- <div class="input-error" >Enter a valid Email</div> -->
+                </div>
+                <div class="user-input-wrp">
+                    <select name="Occupation" class="select inputText">
+                        <option selected>Friend’s Occupation</option>
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                        <option value="manager">Manager</option>
+                    </select>
+                    <!-- <div class="input-error" >Enter a valid Occupation</div> -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="button-single">
+        <div class="action-form-button">
+            <button (click)="referButton()">SUBMIT</button>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="customer-wrapper" *ngIf="product_screen" [@FadeAnimation]>
+    <div class="content-row friend-wrapper">
+        <h4 class="greetings">Select Products you wish to refer to Deepak <button class="back" (click)="backRefer()">Back</button></h4>
+        <div class="history-products">
+            <h5>Products your Purchase History</h5>
+            <ul class="product-checkbox">
+                <li>
+                    <input type="checkbox" id="myCheckbox1" />
+                    <label for="myCheckbox1">
+                        <div class="check-image">
+                         <img src="../../assets/images/prod1.png">
+                        </div>
+                        <div class="name-product">Battery BLi10</div>
+                        <div class="name-category">Accessories</div>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="myCheckbox2" />
+                    <label for="myCheckbox2">
+                        <div class="check-image">
+                            <img src="../../assets/images/prod2.png">
+                        </div>
+                        <div class="name-product">353 965 16 97-18</div>
+                        <div class="name-category">Chainsaws</div>
+                        
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="myCheckbox3" />
+                    <label for="myCheckbox3">
+                        <div class="check-image">
+                            <img src="../../assets/images/prod3.png">
+                        </div>
+                        <div class="name-product">372 XP 965 70 26-38</div>
+                        <div class="name-category">Chainsaws</div>
+                        
+                    </label>
+                </li> 
+                <li>
+                    <input type="checkbox" id="myCheckbox4" />
+                    <label for="myCheckbox4">
+                        <div class="check-image">
+                            <img src="../../assets/images/prod4.png">
+                        </div>
+                        <div class="name-product">Blower Attachment BA101</div>
+                        <div class="name-category">Blower attachment</div>
+                        
+                    </label>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="search-product">
+            <div class="ng-autocomplete">
+                <ng-autocomplete [data]="data" [searchKeyword]="keyword" [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate" [placeHolder]="placeHolder">
+                </ng-autocomplete>
+            
+                <ng-template #itemTemplate let-item>
+                    <a [innerHTML]="item.name"></a>
+                </ng-template>
+            
+                <ng-template #notFoundTemplate let-notFound>
+                    <div [innerHTML]="notFound"></div>
+                </ng-template>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="button-single">
+        <div class="action-form-button">
+            <button>Refer</button>
+        </div>
+    </div>
+
+
+</div>

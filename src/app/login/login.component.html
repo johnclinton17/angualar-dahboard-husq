@@ -2,24 +2,27 @@
     <div class="header-login">
         <div class="row">
             <nav class="login-nav">
-                <a class="" href="#">
+               
                     <div class="logo">
                         <img src="../assets/images/logo.svg" alt="logo">
                     </div>
-                </a>
+                
                 <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button> -->
             
-                <ul class="login-right">
+                <ul class="login-right" *ngIf="showForm"text>
                     <div class="dropdown">
                         <button type="button" class="language-button dropdown-toggle" data-toggle="dropdown">
                             English
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Hindi</a>
-                            <a class="dropdown-item" href="#">French</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" title="Telugu">తెలుగు</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" title="Tamil">தமிழ்</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" title="Malayalam">മലയാളം</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" title="Kannada">ಕನ್ನಡ</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hindi">हिन्दी</a>
                         </div>
                     </div>
                 </ul>
@@ -35,12 +38,14 @@
                     <h5>With you and us, it’s a great partnership for a profitable future.</h5>
 
                     <div class="form-login">
+                        
                         <div class="user-input-wrp">
-                            <input type="tel" class="inputText" required/>
-                            <span class="floating-label">Enter Mobile Number</span>
-                            <div class="input-error" >
+                            <div class="customer-mobile-text">Enter Mobile Number</div>
+                            <input type="tel" class="inputText" (keypress)="keyPress($event)"  minlength=10 maxlength=10 required/>
+                            <span class="prefix">+91</span>
+                            <!-- <div class="input-error" >
                                 Enter a valid mobile number
-                            </div>
+                            </div> -->
                         </div>
                         <button class="submit login" (click)="toggleOtp()">Continue</button>
                     </div>
@@ -48,26 +53,27 @@
                 <div class="otp-wrapper" *ngIf="showOtp" [@FadeAnimation]>
                     <h6>Enter OTP</h6>
                     <div class="otp-dots-row">
-                        <ngx-split-input >
-                            <input ngxSplitInput type="password" maxlength="1">
-                            <input ngxSplitInput type="password" maxlength="1">
-                            <input ngxSplitInput type="password" maxlength="1">
-                            <input ngxSplitInput type="password" maxlength="1">
-                            <input ngxSplitInput type="password" maxlength="1">
-                            <input ngxSplitInput type="password" maxlength="1">
+                        <ngx-split-input (completed)="handleCompleted($event)">
+                            <input ngxSplitInput type="text" maxlength="1" autofocus>
+                            <input ngxSplitInput type="text" maxlength="1">
+                            <input ngxSplitInput type="text" maxlength="1">
+                            <input ngxSplitInput type="text" maxlength="1">
+                            <input ngxSplitInput type="text" maxlength="1">
+                            <input ngxSplitInput type="text" maxlength="1">
                         </ngx-split-input>
                     </div>
                     <div class="timer">
                         4:45
                     </div>
                     <div class="button-row">
-                         <button class="submit otp-button" otp-button (click)="login()">Submit</button>
+                         <button id="otpSubmit" class="submit otp-button" otp-button (click)="login()">Submit</button>
                     </div>
                      <div class="button-row">
                         <button class="submit resend">Resend otp</button>
                         
                     </div>
                 </div>
+                <footer>© 2019 All Rights Reserved. Husqvarna India</footer>
             </div>
         </div>
     

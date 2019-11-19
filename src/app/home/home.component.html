@@ -1,4 +1,4 @@
-<div class="home-wrapper" >
+<div class="home-wrapper" *ngIf="dealer">
     <h4 class="greetings">Good going, Rakesh!</h4>
     <div class="account_summary">
         <p>Account summary : <span>OCT 2019</span></p>
@@ -38,4 +38,47 @@
    
 </div>
 
+<div class="home-wrapper" *ngIf="customer">
+    <h4 class="greetings">Greetings Bharat!</h4>
+    <div class="account_summary">
+        <p>Account summary :
+            <span>OCT 2019</span>
+        </p>
+        <div class="box_menu joint_box">
+            <div class="grey-box">
+                <div class="reward-point-icon">Reward Points</div>
+                <ul class="customer-points">
+                    <li>
+                        <h6 class="title">Total</h6>
+                        <h6 class="title-count">15,900</h6>
+                    </li>
+                    <li>
+                        <h6 class="title">Redeemed</h6>
+                        <h6 class="title-count">10,000</h6>
+                    </li>
+                    <li>
+                        <h6 class="title">Balance</h6>
+                        <h6 class="title-count"><b>5,900</b></h6>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="referral_count">
+             Earn more points by referring friends and updating the purchases of Husqvarna products
+            </div>
+        </div>
+        <div class="box_menu seperate_box">
+            <a class="seperate_menu_button" [routerLink]="['/referafriend']">
+                <div class="image-icon"></div>
+                 Refer A Friend
+            </a>
+            <a class="seperate_menu_button" [routerLink]="['/products']">
+                <div class="image-icon"></div>
+                 My Products
+            </a>
+        </div>
+
+    </div>
+
+</div>
 

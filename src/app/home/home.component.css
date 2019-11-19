@@ -53,6 +53,62 @@ h4.greetings {
     border-right: 0
 }
 
+.grey-box {
+    background: rgba(235, 240, 250, 1) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 28px 35px;
+}
+
+.box_menu.joint_box ul.customer-points {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    padding: 29px 0px 0px;
+}
+
+.box_menu.joint_box ul.customer-points li {
+    padding: 0px 35px;
+    min-height: auto;
+}
+
+.box_menu.joint_box ul.customer-points li:first-child {
+    padding: 0px 35px 0 0;
+}
+
+.box_menu.joint_box ul.customer-points li:last-child {
+    padding: 0px 0px 0 35px;
+}
+
+.reward-point-icon {
+    font: 20px/25px HusqvarnaGothic-Bold;
+    color: #2D2D2D;
+    padding: 0 0px 0 35px;
+    background: url(/assets/images/referral-icon.png) no-repeat 0 1px;
+}
+
+.box_menu.joint_box ul.customer-points li .title {
+    font: 15px/25px HusqvarnaGothic-Bold;
+    letter-spacing: 0.6px;
+    color: #2D2D2D;
+    text-transform: uppercase;
+}
+
+.box_menu.joint_box ul.customer-points li .title-count {
+    font: 22px/25px HusqvarnaGothic-Regular;
+    color: #2D2D2D;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.box_menu.joint_box ul.customer-points li .title-count b {
+    font: 22px/25px HusqvarnaGothic-Bold;
+    color: #2D2D2D;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
 .box-icon {
     display: block;
     height: 35px;
@@ -91,16 +147,16 @@ a.seperate_menu_button {
     background: rgba(243, 110, 66, 1) 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     border-radius: 4px;
-    margin: 0 15px;
+    margin: 0 10px;
     min-height: 160px;
     max-width: 160px;
     width: 100%;
     float: left;
-    padding: 30px 35px;
+    padding: 30px 30px;
     font: 18px/20px HusqvarnaGothic-Bold;
     color: rgba(255, 255, 255, 1);
     transition: 0.2s linear;
-
+    text-transform: uppercase
 }
 
 a.seperate_menu_button:hover {
@@ -171,6 +227,20 @@ a.seperate_menu_button:last-child .image-icon {
     .count_number {
         font: 35px/40px HusqvarnaGothic-Light;
     }
+
+    .box_menu.joint_box ul.customer-points li:first-child {
+        padding: 0px 10px 0 0;
+    }
+
+    .box_menu.joint_box ul.customer-points li {
+        padding: 0px 15px;
+        min-height: auto;
+    }
+
+    .box_menu.joint_box ul.customer-points li:last-child {
+        padding: 0px 0px 0 15px;
+    }
+
 }
 
 @media (max-width:800px) {
@@ -187,6 +257,8 @@ a.seperate_menu_button:last-child .image-icon {
 @media (max-width:663px) {
     .home-wrapper {
         padding: 30px 30px 20px;
+        margin: 155px 0 0;
+        background: rgba(39, 58, 96, 1)
     }
 
     h4.greetings {

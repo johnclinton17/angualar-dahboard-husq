@@ -651,6 +651,14 @@ ngx-split-input input {
             transform: translateY(70px);
         }
     }
+
+    .invoice-wrapper {
+        margin: 155px 0 0;
+    }
+
+
+
+
 }
 
 @media (max-width:360px) {

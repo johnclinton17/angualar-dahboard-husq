@@ -14,6 +14,7 @@ h4.greetings {
     font: 22px/25px HusqvarnaGothic-Bold;
     color: rgba(18, 83, 161, 1);
     margin-bottom: 20px;
+    position: relative;
 }
 
 .formrow {
@@ -78,6 +79,23 @@ h4.greetings {
     float: left;
     margin-right: 50px;
 }
+
+.column1_2:last-child {
+    padding: 10px 0 0 0;
+}
+
+.button-single {
+    padding: 0px 20px 50px 80px;
+    overflow: auto;
+}
+
+.reward-point-icon {
+    font: 16px/25px HusqvarnaGothic-Bold;
+    color: #0074FF;
+    padding: 20px 0px 20px 35px;
+    background: url(/assets/images/referral-icon.png) no-repeat 0 20px;
+}
+
 
 .column1_1 {
     width: 710px;
@@ -250,11 +268,9 @@ input#count {
 
 }
 
-
-
 .action-form-button {
     clear: both;
-    margin: 40px 0 0;
+    margin: 0px 0 0;
 
 }
 
@@ -280,6 +296,99 @@ input#count {
     width: 100%;
 }
 
+button.back {
+    position: absolute;
+    background: transparent url(../../assets/images/back.png) no-repeat 0 3px;
+    border: none;
+    right: 0;
+    font: 15px/20px HusqvarnaGothic-Regular;
+    color: #0074FF;
+    padding: 0px 0px 0px 15px;
+    border-bottom: 1px solid transparent;
+    transition: 0.2s linear;
+}
+
+button.back:hover {
+    color: #0074FF;
+    border-bottom: 1px solid #0074FF;
+    transition: 0.2s linear;
+
+
+}
+
+.history-products {
+    padding: 30px 0px 40px;
+    overflow: auto;
+}
+
+.history-products h5 {
+    font: 15px/25px HusqvarnaGothic-Regular;
+    color: #8B8B8B;
+    margin-bottom: 15px;
+}
+
+
+.product-checkbox label:before {
+    content: url(../../assets/images/checkbox.png);
+    position: absolute;
+    z-index: 100;
+    right: 15px;
+    top: 12px;
+}
+
+.product-checkbox :checked+label:before {
+    content: url(../../assets/images/checkbox_active.png);
+}
+
+.product-checkbox input[type=checkbox] {
+    display: none;
+}
+
+/*pure cosmetics:*/
+.check-image {
+    display: block;
+    min-height: 50px;
+}
+
+.name-product {
+    font: 14px/16px HusqvarnaGothic-Bold;
+    color: #2D2D2D;
+    margin: 5px 0px;
+}
+
+.name-category {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    color: #8B8B8B;
+}
+
+.product-checkbox label {
+    padding: 30px 20px 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.product-checkbox li {
+    float: left;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #DEDEDE;
+    border-radius: 6px;
+    margin-right: 20px;
+
+}
+
+
+.content-row.friend-wrapper {
+    overflow: visible;
+    min-height: 400px;
+}
 
 
 @media (max-width:900px) {
@@ -296,9 +405,15 @@ input#count {
 }
 
 @media (max-width:663px) {
+    .customer-wrapper {
+        background: rgba(39, 58, 96, 1)
+    }
+
     .content-row {
         padding: 50px 30px;
         overflow: auto;
+        margin: 155px 0 0;
+        background: rgba(39, 58, 96, 1)
     }
 
     .content-row.grey-backgorund {
@@ -323,21 +438,17 @@ input#count {
         margin: 10px 0 0;
     }
 
-    .customer-wrapper {
-        margin: 155px 0 0;
-    }
-
-    .content-row {
-        background: rgba(39, 58, 96, 1);
-    }
-
     h4.greetings {
         color: #fff;
     }
 
+    .reward-point-icon {
+        color: #fff
+    }
+
     .user-input-wrp .inputText {
-        background: transparent;
         color: #fff;
+        background: transparent;
     }
 
     .user-input-wrp .floating-label {
@@ -348,46 +459,53 @@ input#count {
         color: #fff;
     }
 
-    .user-input-wrp select.select.inputText option {
-        color: #000;
+    .button-single {
+        padding: 0px 20px 50px 30px;
+        overflow: auto;
     }
 
-    .refered-text {
-        color: #fff
+    .product-checkbox li {
+        width: 124px;
+        height: 160px;
+        margin-right: 15px;
     }
 
-    /* .content-row.grey-backgorund {
-        background: rgba(39, 58, 96, 1);
-    } */
-
-    .content-row.grey-backgorund h4.greetings {
-        color: rgba(18, 83, 161, 1);
+    .product-checkbox li:last-child {
+        width: 120px;
+        height: 160px;
+        margin-right: 0px;
     }
 
-}
-
-@media (max-width:360px) {
-    .input-count ul li {
-        width: 25px;
-        height: 27px;
+    .product-checkbox label {
+        padding: 30px 8px 20px;
     }
 
-    .input-count ul li:first-child button i {
-        position: absolute;
-        top: -12px;
-        font-size: 17px;
-        color: rgba(112, 112, 112, 1);
+
+
     }
 
-    .input-count ul li:last-child button i {
-        position: absolute;
-        top: -7px;
-        font-size: 17px;
-        color: rgba(112, 112, 112, 1);
-    }
+    @media (max-width:360px) {
+        .input-count ul li {
+            width: 25px;
+            height: 27px;
+        }
 
-    .action-form-button button {
-        width: 100%;
-    }
+        .input-count ul li:first-child button i {
+            position: absolute;
+            top: -12px;
+            font-size: 17px;
+            color: rgba(112, 112, 112, 1);
+        }
 
-}
+        .input-count ul li:last-child button i {
+            position: absolute;
+            top: -7px;
+            font-size: 17px;
+            color: rgba(112, 112, 112, 1);
+        }
+
+        .action-form-button button {
+            width: 100%;
+        }
+
+    }

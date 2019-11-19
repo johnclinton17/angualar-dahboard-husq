@@ -1,0 +1,149 @@
+.products-row {
+    padding: 50px 20px 50px 80px;
+    overflow: auto;
+}
+
+
+h4.greetings {
+    text-align: left;
+    font: 22px/25px HusqvarnaGothic-Bold;
+    color: rgba(18, 83, 161, 1);
+    margin-bottom: 20px;
+}
+
+.product-list {
+    border-top: 2px solid rgba(174, 174, 174, .3);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.product-list:last-child {
+    border-bottom: 2px solid rgba(174, 174, 174, .3);
+}
+
+.product-image {
+    width: 5%;
+    float: left;
+    display: flex;
+}
+
+.product-image img {
+    margin: 0 auto;
+    display: block;
+}
+
+
+.product-name {
+    font: 18px/25px HusqvarnaGothic-Bold;
+    color: #2D2D2D;
+    display: inline-block;
+    float: left;
+    width: 30%;
+    padding-left: 30px;
+}
+
+.product-category {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 35px;
+    color: #8B8B8B;
+    width: 30%;
+    text-align: left;
+    display: inline-block;
+    float: left;
+}
+
+.product-purchasedate {
+    font: 15px/25px HusqvarnaGothic-Regular;
+    color: #2D2D2D;
+    width: 20%;
+    float: left;
+}
+
+.product-options {
+    width: 15%;
+    float: right;
+    text-align: right;
+}
+
+button.share {
+    width: 20px;
+    height: 23px;
+    background: transparent url(../../assets/images/share.png)no-repeat 0 0;
+    border: none;
+    margin: 0 10px;
+    transition: .2s linear;
+}
+
+button.invoice {
+    width: 20px;
+    height: 23px;
+    background: transparent url(../../assets/images/invoice.png)no-repeat 0 0;
+    border: none;
+    transition: .2s linear;
+}
+
+button.invoice:hover {
+    background: transparent url(../../assets/images/invoice_active.png)no-repeat 0 0;
+    transition: .2s linear;
+}
+
+button.share:hover {
+    background: transparent url(../../assets/images/share_active.png)no-repeat 0 0;
+    transition: .2s linear;
+}
+
+@media (max-width:1367px) {
+
+    .product-image {
+        width: 10%;
+        float: left;
+        display: flex;
+    }
+
+}
+
+@media (max-width:663px) {
+
+    .products-row {
+        padding: 50px 20px 50px 30px;
+        overflow: auto;
+        margin: 155px 0 0;
+        background: rgba(39, 58, 96, 1);
+    }
+
+    h4.greetings {
+        color: #fff;
+    }
+
+    .product-image {
+        width: 20%;
+    }
+
+    .product-name {
+        font: 18px/25px HusqvarnaGothic-Bold;
+        color: #fff;
+        width: 40%;
+        padding-left: 30px;
+    }
+
+    .product-category{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 35px;
+        color: #8B8B8B;
+        width: 30%;
+    }
+
+    .product-purchasedate {
+        display: none;
+    }
+
+
+
+
+}

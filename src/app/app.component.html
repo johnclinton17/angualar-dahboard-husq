@@ -3,21 +3,35 @@
     <div class="logo-side">
         <img src="../assets/images/logo.svg" alt="logo">
     </div>
-    <ul class="sidebar-menu">
+    <ul class="sidebar-menu" *ngIf="dealer">
         <li>
-            <button class="new_customer" [routerLink]="['/customer']" routerLinkActive="active"></button>
+            <button class="home" [routerLink]="['/home']" routerLinkActive="active" tooltip="Home" placement="right" show-delay="150"></button>
         </li>
         <li>
-            <button class="new_invoice" [routerLink]="['/invoice']" routerLinkActive="active"></button>
+            <button class="new_customer" [routerLink]="['/customer']" routerLinkActive="active" tooltip="Add New Customer" placement="right" show-delay="150"></button>
         </li>
         <li>
-            <button class="refer_friend"></button>
+            <button class="new_invoice" [routerLink]="['/invoice']" routerLinkActive="active" tooltip="Add New Sale Invoice" placement="right" show-delay="150"></button>
         </li>
         <li>
-            <button class="users"></button>
+            <button class="refer_friend" tooltip="Reward Redemptions" placement="right" show-delay="150"> </button>
         </li>
         <li>
-            <button class="home" [routerLink]="['/home']" routerLinkActive="active"></button>
+            <button class="users" tooltip="Customers" placement="right" show-delay="150"></button>
+        </li>
+    </ul>
+    <ul class="sidebar-menu" *ngIf="customer">
+        <li>
+            <button class="home" [routerLink]="['/home']" routerLinkActive="active" tooltip="Home" placement="right" show-delay="150"></button>
+        </li>
+        <li>
+            <button class="products"  [routerLink]="['/products']" routerLinkActive="active" tooltip="My Products" placement="right" show-delay="150"></button>
+        </li>
+        <li>
+            <button class="refer_friend" ></button>
+        </li>
+        <li>
+            <button class="refer_product" [routerLink]="['/referafriend']" routerLinkActive="active"></button>
         </li>
     </ul>
 </div>
@@ -37,8 +51,11 @@
                             English
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Hindi</a>
-                            <a class="dropdown-item" href="#">French</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" title="Telugu">తెలుగు</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" title="Tamil" >தமிழ்</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" title="Malayalam" >മലയാളം</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" title="Kannada" >ಕನ್ನಡ</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hindi" >हिन्दी</a>
                         </div>
                     </div>
                 </li>
@@ -69,4 +86,5 @@
     <div class="content-outlet" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
         <router-outlet #o="outlet"></router-outlet>
     </div>
+    <footer class="home-footer" *ngIf="!hideHeader">© 2019 All Rights Reserved. Husqvarna India</footer>
 </div>

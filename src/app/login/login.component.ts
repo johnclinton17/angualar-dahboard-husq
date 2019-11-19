@@ -3,6 +3,10 @@ import { trigger, transition, animate, style } from '@angular/animations';
 import { NgxSplitInputModule } from 'ngx-splitinput';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
+import { FormBuilder, Validators, FormGroup, FormControl} from '@angular/forms';
+
+
+
 
 @Component({
   selector: 'app-login',
@@ -38,16 +42,28 @@ export class LoginComponent implements OnInit {
   hideHeader = true;
   showForm = true;
   showOtp = false;
+  name = new FormControl('');
+ 
 
-
-  constructor(private router: Router,public appload: AppComponent) {
-  
+  constructor(private router: Router, public appload: AppComponent, private fb: FormBuilder) {
+    
    }
 
   ngOnInit() {
     
     this.appload.loaderfunction(true);
+
   }
+
+  keyPress(event: any) {
+    const pattern = /[0-9\+\-\ ]/;
+
+    let inputChar = String.fromCharCode(event.charCode);
+    if (event.keyCode != 8 && !pattern.test(inputChar)) {
+      event.preventDefault();
+    }
+  }
+
 
 
   toggleOtp(){
@@ -59,6 +75,10 @@ export class LoginComponent implements OnInit {
     divToChange.className = "col-md-7 content-login otpOpened";
   }
 
+  handleCompleted(event: any): void {
+    console.log(event);
+    document.getElementById('otpSubmit').focus(); 
+  }
 
   toggleForm(){
     this.showForm = true;
@@ -71,6 +91,7 @@ export class LoginComponent implements OnInit {
     this.appload.loaderfunction(false);
       this.router.navigate(['/home']);
   }
+
 
  
 
